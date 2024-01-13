@@ -58,7 +58,11 @@ const ChapterActions = ({
         
         <div className="flex items-center gap-x-2">
             <Button 
+<<<<<<< HEAD
                 onClick={onClick}
+=======
+                onClick={() => {}}
+>>>>>>> e1e400be97ce16cba9ab3970d2bc61ff389a3c44
                 disabled={disabled || isLoading}
                 variant="outline"
                 size="sm"
