@@ -29,14 +29,14 @@ const ChapterActions = ({
     const onDelete = async() => {    
         try {
             setIsLoading(true);
-            await axios.delete(`/api/courses/${courseId}/chapters/${chapterId}`);
+            await axios.delete(`/api/courses/${courseId}/chapters/${chapterId}`)
     
             toast.success("Chapter deleted")
-            router.refresh();
             router.push(`/teacher/courses/${courseId}`)
+            router.refresh();
         } catch (error) {
             console.log(error)
-            toast.error("mastikhor")
+            toast.error("Failed deleting course")
         } finally {
             setIsLoading(false);
         }
@@ -48,7 +48,7 @@ const ChapterActions = ({
         <div className="flex items-center gap-x-2">
             <Button 
                 onClick={() => {}}
-                disabled={disabled}
+                disabled={disabled || isLoading}
                 variant="outline"
                 size="sm"
             >
