@@ -29,11 +29,11 @@ const ChapterActions = ({
     const onClick = async () => {
         if(isPublished) {
             await axios.patch(`/api/courses/${courseId}/chapters/${chapterId}/unpublish`)
-            toast.success("course unpublished")
+            toast.success("Chapter unpublished")
             router.refresh();
         } else {
             await axios.patch(`/api/courses/${courseId}/chapters/${chapterId}/publish`)
-            toast.success("course published")
+            toast.success("Chapter published")
             router.refresh();
         }
     }
@@ -47,7 +47,7 @@ const ChapterActions = ({
             router.refresh();
         } catch (error) {
             console.log(error)
-            toast.error("Failed deleting course")
+            toast.error("Failed deleting chapter")
         } finally {
             setIsLoading(false);
         }

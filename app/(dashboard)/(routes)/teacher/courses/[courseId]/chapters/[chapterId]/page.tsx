@@ -7,10 +7,9 @@ import { redirect } from "next/navigation";
 import { ChapterTitleForm } from "./_components/chapter-title-form";
 import ChapterDescriptionForm from "./_components/chapter-description-form";
 import ChapterAccessForm from "./_components/chapter-access-form";
-import ChapterVideo from "./_components/chapter-video-form";
 import ChapterVideoForm from "./_components/chapter-video-form";
 import { Banner } from "@/components/banner";
-import ChapterActions from "./chapter-actions";
+import ChapterActions from "./_components/chapter-actions";
 
 const ChapterIdPage = async({
     params
@@ -56,7 +55,7 @@ const ChapterIdPage = async({
             {!chapter.isPublished && (
                 <Banner 
                     variant="warning" 
-                    label="This course is unpublished. It will not be visible in the course" 
+                    label="This chapter is unpublished. It will not be visible in the course" 
                 />
             )}
             <div className="p-6">
