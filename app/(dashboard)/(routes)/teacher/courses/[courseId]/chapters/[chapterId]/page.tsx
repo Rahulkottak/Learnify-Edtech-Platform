@@ -76,7 +76,7 @@ const ChapterIdPage = async({
                             <ChapterActions
                                 disabled={!isComplete}
                                 courseId={params.courseId}
-                                chapterId={params.courseId}
+                                chapterId={params.chapterId}
                                 isPublished={chapter.isPublished}
                             />
                         </div>
