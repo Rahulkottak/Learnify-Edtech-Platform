@@ -30,13 +30,13 @@ const ChapterActions = ({
         if(isPublished) {
             await axios.patch(`/api/courses/${courseId}/chapters/${chapterId}/unpublish`)
             toast.success("course unpublished")
+            router.refresh();
         } else {
             await axios.patch(`/api/courses/${courseId}/chapters/${chapterId}/publish`)
             toast.success("course published")
+            router.refresh();
         }
     }
-
-
     const onDelete = async() => {    
         try {
             setIsLoading(true);
@@ -58,11 +58,7 @@ const ChapterActions = ({
         
         <div className="flex items-center gap-x-2">
             <Button 
-<<<<<<< HEAD
                 onClick={onClick}
-=======
-                onClick={() => {}}
->>>>>>> e1e400be97ce16cba9ab3970d2bc61ff389a3c44
                 disabled={disabled || isLoading}
                 variant="outline"
                 size="sm"
