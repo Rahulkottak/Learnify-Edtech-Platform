@@ -38,3 +38,5 @@ const AnalyticsPage = async () => {
         </div>
     );
 }
+
+export default AnalyticsPage;
