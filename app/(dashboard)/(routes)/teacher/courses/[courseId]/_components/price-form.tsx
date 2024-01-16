@@ -21,6 +21,7 @@ import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { Textarea } from '@/components/ui/textarea';
 import { Course } from '@prisma/client';
+import { formatPrice } from '@/lib/format';
 
 interface PriceFormProps {
     initialData: Course,
@@ -81,7 +82,10 @@ const PriceForm = ({
                 <p className={cn("text-sm mt-2",
                     !initialData.price && "text-slate-500 italic"
                 )}>
-                    { initialData.price || "No price"}
+                    {initialData.price
+                        ? formatPrice(initialData.price)
+                        : "No price"
+                    }
                 </p>
             )}
             {

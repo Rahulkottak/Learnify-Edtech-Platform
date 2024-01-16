@@ -50,7 +50,7 @@ const ChapterVideoForm = ({
     return ( 
         <div className='mt-6 border bg-slate-100 rounded-md p-4'>
             <div className='font-medium flex items-center justify-between'>
-                Chapter's Video
+                Chapter&apos;s Video
                 <Button variant="ghost" onClick={ToggleEdit}>
                 {isImageUpload && (
                     <>Cancel</>
@@ -94,7 +94,7 @@ const ChapterVideoForm = ({
                     />
 
                     <div className='text-xs text-muted-foreground mt-4'>
-                        Upload this chapter's video
+                        Upload this chapter&apos;s video
                     </div>
                 </div>
             )}

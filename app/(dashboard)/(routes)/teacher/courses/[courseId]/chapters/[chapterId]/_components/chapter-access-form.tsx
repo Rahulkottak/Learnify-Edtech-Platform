@@ -107,9 +107,8 @@ const ChapterAccessForm = ({
 
                                         <Checkbox
                                             checked={field.value} 
-                                            onCheckChange={onchange}
+                                            onCheckedChange={field.onChange}
                                         />
-                                            
 
                                         </FormControl>
                                         <div className='space-y-1 leading-none'>
